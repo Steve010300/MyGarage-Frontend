@@ -1,0 +1,191 @@
+:root{
+	--bg-1: #081726;
+	--bg-2: #0e2534;
+	--card: rgba(255,255,255,0.04);
+	--muted: rgba(255,255,255,0.6);
+	--accent: #5ea0ff;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+	margin:0;
+	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg,var(--bg-1),var(--bg-2));
+	color: #eaf3ff;
+	-webkit-font-smoothing:antialiased;
+}
+
+/* Navbar */
+#navbar{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:20px 40px;
+}
+.brand{font-weight:700;font-size:33px;color:#fff;text-decoration:none}
+.brand:visited{color:#fff}
+.brand:hover{color:var(--accent)}
+.brand:focus-visible{outline:2px solid rgba(94,160,255,0.55);outline-offset:4px;border-radius:10px}
+.nav-right .nav-link{
+	margin-left:18px;
+	color:var(--muted);
+	text-decoration:none;
+	font-size:20px;
+	font-weight:600;
+	padding:8px 12px;
+	border-radius:10px;
+	transition:all 160ms ease;
+}
+.nav-right .nav-link:visited{color:var(--muted)}
+.nav-right .nav-link:hover{
+	color:#fff;
+	background:rgba(255,255,255,0.02);
+	transform:translateY(-1px);
+}
+
+/* Links */
+.back-link{color:var(--accent);text-decoration:none;font-weight:700}
+.back-link:visited{color:var(--accent)}
+.back-link:hover{text-decoration:underline;color:#fff}
+
+/* Car detail actions */
+.car-detail-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.car-detail-actions{display:flex;gap:10px;align-items:center}
+.review-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+/* Page container */
+.home{max-width:1100px;margin:28px auto;padding:0 20px}
+
+.page{max-width:1100px;margin:28px auto;padding:0 20px}
+
+/* Hero */
+.hero{position:relative;display:flex;gap:28px;align-items:center}
+.hero-image{width:62%;height:420px;object-fit:cover;object-position:50% 35%;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.hero-content{width:40%;padding:12px}
+.hero-content h1{font-size:48px;margin:0 0 12px;font-weight:800;color:#fff}
+.hero-content p{color:var(--muted);margin:0 0 18px}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none}
+.btn-ghost{background:#fff;color:#062433;padding:10px 16px;border-radius:10px;font-weight:700}
+.btn-primary{background:linear-gradient(180deg,var(--accent),#2f80ff);border:none;color:#fff;padding:14px;border-radius:12px;font-weight:700}
+
+/* small thumbnails below hero */
+.thumbs{display:flex;gap:16px;margin:18px 0}
+.thumb{flex:1}
+.thumb img{width:100%;height:190px;object-fit:cover;object-position:50% 45%;border-radius:12px}
+
+
+
+/* Auth pages */
+.auth-page{display:flex;align-items:center;justify-content:center;padding:40px}
+.auth-panel{width:420px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:36px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.auth-title{font-size:42px;margin:0 0 18px}
+.auth-form{display:flex;flex-direction:column;gap:12px}
+.input{padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:#fff}
+.input::placeholder{color:rgba(255,255,255,0.4)}
+.form-error{color:#ffb3b3;margin-top:8px}
+.auth-footer{margin-top:12px;color:var(--muted)}
+
+/* responsive */
+@media (max-width:900px){
+	.hero{flex-direction:column}
+	.hero-image{width:100%;height:300px;object-position:50% 35%}
+	.hero-content{width:100%}
+	.thumb img{height:130px}
+}
+
+/* Upload page */
+.upload-page{max-width:780px;margin:24px auto 60px}
+.upload-title{font-size:64px;letter-spacing:-0.02em;margin:8px 0 18px;font-weight:900;color:#fff}
+
+.upload-card{border-radius:18px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));box-shadow:0 18px 45px rgba(0,0,0,0.55);border:1px solid rgba(255,255,255,0.06)}
+.upload-image{position:relative;height:340px}
+.upload-image img{width:100%;height:100%;object-fit:cover;display:block}
+.upload-image-placeholder{width:100%;height:100%;background:radial-gradient(1200px 400px at 50% 0%, rgba(94,160,255,0.35), rgba(255,255,255,0.02) 60%, rgba(0,0,0,0.1)), linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))}
+
+.upload-photo-btn{position:absolute;left:18px;bottom:18px;background:rgba(7, 22, 35, 0.72);border:1px solid rgba(255,255,255,0.10);color:#eaf3ff;padding:14px 16px;border-radius:12px;font-weight:800;font-size:18px;backdrop-filter: blur(10px);cursor:pointer}
+.upload-photo-btn:hover{background:rgba(7, 22, 35, 0.82)}
+.upload-file{display:none}
+
+.upload-form{margin-top:18px;display:flex;flex-direction:column;gap:14px}
+.upload-row{display:flex;gap:12px}
+.upload-row-actions{align-items:center}
+
+.upload-input,.upload-textarea,.upload-select{width:100%;padding:18px 18px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#eaf3ff;outline:none}
+.upload-input::placeholder,.upload-textarea::placeholder{color:rgba(255,255,255,0.35)}
+.upload-textarea{resize:none}
+.upload-select{width:120px;min-width:120px}
+.upload-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background-color:rgba(255,255,255,0.04);background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23eaf3ff'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpolyline%20points='6%209%2012%2015%2018%209'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-size:18px 18px;padding-right:44px;cursor:pointer}
+.upload-select option{background-color:var(--bg-1);color:#eaf3ff}
+.upload-select:focus{border-color:rgba(94,160,255,0.55);box-shadow:0 0 0 4px rgba(94,160,255,0.12)}
+.upload-year{max-width:140px}
+.upload-url{flex:1}
+
+.upload-submit{width:100%;margin-top:10px;padding:16px 18px;border-radius:16px;border:0;background:linear-gradient(180deg, #4b93ff, #2b7bff);color:#fff;font-weight:900;font-size:22px;cursor:pointer;box-shadow:0 12px 30px rgba(46,124,255,0.25)}
+.upload-submit:disabled{opacity:0.55;cursor:not-allowed}
+
+.upload-error{color:#ffb3b3;margin:0}
+.upload-warn{color:#ffb3b3;margin:12px 0 0}
+.upload-note{color:rgba(255,255,255,0.65);margin:0}
+
+/* Car detail review panel */
+.review-panel{max-width:900px;margin:0 0 8px;border-radius:18px;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.015));border:1px solid rgba(255,255,255,0.06);box-shadow:0 14px 36px rgba(0,0,0,0.35)}
+.review-title{margin:0 0 8px;font-size:26px}
+
+/* Favorites star */
+.fav-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.75);font-size:22px;font-weight:900;cursor:pointer;backdrop-filter: blur(10px)}
+.fav-btn:hover{background:rgba(255,255,255,0.06);color:#fff;transform:translateY(-1px)}
+.fav-btn:disabled{opacity:0.55;cursor:not-allowed;transform:none}
+.fav-btn--active{color:#ffd56a;border-color:rgba(255,213,106,0.35);background:rgba(255,213,106,0.10)}
+
+/* Favorites page */
+.fav-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:16px}
+.fav-card{position:relative;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));box-shadow:0 14px 36px rgba(0,0,0,0.35)}
+.fav-link{display:block;text-decoration:none;color:inherit}
+.fav-image{width:100%;height:160px;object-fit:cover;display:block}
+.fav-image--placeholder{background:rgba(255,255,255,0.06)}
+.fav-body{padding:12px 12px 58px}
+.fav-title{font-weight:800}
+.fav-remove{position:absolute;left:12px;bottom:12px;border:1px solid rgba(255,255,255,0.12);background:rgba(7, 22, 35, 0.62);color:#eaf3ff;border-radius:12px;padding:10px 12px;font-weight:800;cursor:pointer}
+.fav-remove:hover{background:rgba(7, 22, 35, 0.78)}
+.fav-remove:disabled{opacity:0.6;cursor:not-allowed}
+
+/* My Cars page */
+.mycars-page{max-width:980px}
+.mycars-title{font-size:64px;letter-spacing:-0.02em;margin:8px 0 18px;font-weight:900;color:#fff}
+.mycars-empty{background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.015));border:1px solid rgba(255,255,255,0.06);border-radius:18px;padding:18px;box-shadow:0 14px 36px rgba(0,0,0,0.35)}
+.mycars-list{display:grid;gap:14px}
+
+.mycar-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:stretch;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));border:1px solid rgba(255,255,255,0.06);border-radius:18px;overflow:hidden;box-shadow:0 14px 36px rgba(0,0,0,0.35)}
+.mycar-row:hover{transform:translateY(-1px);background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02))}
+.mycar-link{display:grid;grid-template-columns:260px 1fr;gap:18px;align-items:center;text-decoration:none;color:inherit}
+.mycar-image{height:120px}
+.mycar-image img{width:100%;height:100%;object-fit:cover;display:block}
+.mycar-image-placeholder{width:100%;height:100%;background:rgba(255,255,255,0.04)}
+.mycar-body{padding:12px 18px}
+.mycar-name{margin:0 0 6px;font-size:26px;font-weight:900}
+.mycar-desc{margin:0;color:rgba(255,255,255,0.65)}
+
+.mycar-actions{display:flex;gap:10px;align-items:center;padding:12px 14px}
+.action-btn{border:1px solid rgba(255,255,255,0.12);background:rgba(7, 22, 35, 0.55);color:#eaf3ff;border-radius:12px;padding:10px 12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.action-btn:hover{background:rgba(7, 22, 35, 0.72)}
+.action-btn:disabled{opacity:0.6;cursor:not-allowed}
+.action-btn--danger{border-color:rgba(255,120,120,0.25);color:#ffd6d6}
+.action-btn--danger:hover{background:rgba(90, 12, 20, 0.55)}
+
+@media (max-width:820px){
+	.mycars-title{font-size:44px}
+	.mycar-row{grid-template-columns:1fr}
+	.mycar-link{grid-template-columns:1fr}
+	.mycar-image{height:180px}
+	.mycar-actions{justify-content:space-between}
+}
+
+@media (max-width:720px){
+	.upload-title{font-size:44px}
+	.upload-image{height:260px}
+	.upload-row{flex-direction:column}
+	.upload-select{width:100%}
+	.upload-year{max-width:none}
+}
+
