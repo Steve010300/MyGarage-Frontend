@@ -1,3 +1,6 @@
+## Demo The App!
+https://mygarage-app.netlify.app
+
 # Frontend Template
 
 You can use this repository as a template for your frontend. It provides a very simple
